@@ -1,0 +1,29 @@
+<b-container class="content">
+  <b-row>
+    <b-col class="content">
+      <h1>Images</h1>
+      <div class="col-12 mb-1 text-center">
+        <span>Search : </span>
+        <input v-model="searchText" />
+        <button @click="onSearchClick">Search</button> <br>
+        <span class="text-danger" >{{error}}</span>
+      </div>
+      <div v-show="items && items.length > 0">
+        <swiper :options="swiperOptionTop" class="gallery-top" ref="swiperTop">
+          <swiper-slide v-for="(img, index) in items" :key="index" class="swiper-slide" ref="swiperT" :class="img.media.m">
+            <img :src="img.media.m" />
+          </swiper-slide>
+
+          <div class="swiper-button-next swiper-button-white" slot="button-next"></div>
+          <div class="swiper-button-prev swiper-button-white" slot="button-prev"></div>
+        </swiper>
+        <!-- swiper2 Thumbs -->
+        <swiper :options="swiperOptionThumbs" class="gallery-thumbs" ref="swiperThumbs">
+          <swiper-slide :key="index" v-for="(img, index) in items" ref="swiperTh" :class="img.media.m">
+            <img :src="img.media.m" />
+          </swiper-slide>
+        </swiper>
+      </div>
+    </b-col>
+  </b-row>
+</b-container>

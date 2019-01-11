@@ -1,0 +1,36 @@
+// @import './swiper/dist/css/swiper.css';
+@import '../../../node_modules/swiper/dist/css/swiper.css';
+
+.swiper-container {
+    background-color: rgb(53, 53, 53);
+  }
+  .swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
+  .gallery-top {
+    height: 500px !important;
+    width: 100%;
+  }
+  .gallery-top .swiper-slide {
+      margin: auto;
+      text-align: center;
+      vertical-align: middle;
+  }
+  .gallery-top .swiper-slide img{
+      height: 80%;
+      margin-top: 20px;
+  }
+  .gallery-thumbs {
+    // height: 20%!important;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+  .gallery-thumbs .swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+  }
+  .gallery-thumbs .swiper-slide-active {
+    opacity: 1;
+  }
