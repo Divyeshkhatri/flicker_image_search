@@ -34,3 +34,14 @@
   .gallery-thumbs .swiper-slide-active {
     opacity: 1;
   }
+  .gallery-thumbs .swiper-slide img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+  }
+  
+  .gallery-thumbs .swiper-slide {
+    width: 15% !important;
+    height: 100px !important;
+    overflow: hidden;
+  }
